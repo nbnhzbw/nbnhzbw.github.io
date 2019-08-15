@@ -480,13 +480,13 @@ A：set可以插入，查询，排序，遍历等一些操作。（set自动排�
 
 	//Create gitalk
 	var gitalk = new Gitalk({
-		clientID: 'f2af2d0bf3c43f814c5e',
-		clientSecret: 'e04d9b71cd48f62addc8b3ad934b556c982e4113',
+		clientID: 'd57447c7cb0b0684fb4c',
+		clientSecret: 'ddd4ceafda9d714fce2f0573e12706817a509b29',
 		//id: window.location.pathname,
 		//id: decodeURI(window.location.pathname),
 		//id: (window.location.pathname).split("/").pop().substring(0, 49),
 		id: decodeURI( md5( location.href.trimEnd('#.*$,\\?.*$,index.html$') ) ),
-		repo: 'nbnhzbw-gittalk',
+		repo: 'Gitalk.io',
 		owner: 'nbnhzbw',
 		admin: 'nbnhzbw',
 		distractionFreeMode: 'true',
@@ -850,5 +850,21 @@ A：set可以插入，查询，排序，遍历等一些操作。（set自动排�
 <script src="/plugin/nicescroll/jquery.nicescroll.js"></script>
 <script src="/js/resizediv.js"></script>
 <script src="/js/main.js"></script>
-	</body>	
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>	
 </html>
