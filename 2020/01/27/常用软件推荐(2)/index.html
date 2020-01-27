@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      题解 P3966 【[TJOI2013]单词】 | nbnhzbw&#39;s blog
+      常用软件推荐(2) | nbnhzbw&#39;s blog
     
   </title>
   <meta name="author" content="nbnhzbw">
@@ -160,7 +160,7 @@
 	<!-- Page title -->
 	<p>
 		
-			当前文章&nbsp;:&nbsp;《题解 P3966 【[TJOI2013]单词】》
+			当前文章&nbsp;:&nbsp;《常用软件推荐(2)》
 		
 	</p>
 
@@ -258,6 +258,18 @@
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+			</div>
+		</div>
+
+		
+		<script src="/plugin/toc/katelog.min.js"></script>
+
+		
 	 
 
 <div class="layout-post">
@@ -265,8 +277,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/08/14/题解 P3966 【[TJOI2013]单词】/" itemprop="url">
-		题解 P3966 【[TJOI2013]单词】
+	<a href="/2020/01/27/常用软件推荐(2)/" itemprop="url">
+		常用软件推荐(2)
 	</a>
 
 	</div>
@@ -279,9 +291,9 @@
 
 	发布于
 
-	<a href="/2019/08/14/题解 P3966 【[TJOI2013]单词】/" itemprop="url">
-		<time datetime="2019-08-14T13:40:34.645Z" itemprop="datePublished">
-	  		2019-08-14
+	<a href="/2020/01/27/常用软件推荐(2)/" itemprop="url">
+		<time datetime="2020-01-26T16:00:00.000Z" itemprop="datePublished">
+	  		2020-01-27
 	  </time>
 	</a>
 	&nbsp;
@@ -297,9 +309,9 @@
 
 	更新于
 
-	<a href="/2019/08/14/题解 P3966 【[TJOI2013]单词】/" itemprop="url">
-		<time datetime="2019-08-14T13:40:34.645Z" itemprop="dateUpdated">
-	  		2019-08-14
+	<a href="/2020/01/27/常用软件推荐(2)/" itemprop="url">
+		<time datetime="2020-01-26T16:00:00.000Z" itemprop="dateUpdated">
+	  		2020-01-27
 	  </time>
 	</a> 
 
@@ -310,8 +322,8 @@
 			<i class="fa fa-tags"></i>
 			
 	
-		<a href="/tags/C-字符串/" class=" ">
-			C++字符串
+		<a href="/tags/软件推荐/" class=" ">
+			软件推荐
 		</a>
 	
 		
@@ -324,14 +336,14 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<p><strong>这道题可以用字符串的find做，虽然代码易打，但还是有要注意的地方：</strong></p>
-<p>1：每次查找位置以后，下一次查找的位置是以上一次查找的位置加1，否则就会死循环。</p>
-<p>2：当find查找不到的时候，似乎会返回一个很大的值，所以，查找的位置小于字符串长度即可。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,ans;</span><br><span class="line"><span class="built_in">string</span> s[<span class="number">210</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ios::sync_with_stdio(<span class="literal">false</span>),<span class="built_in">cin</span>.tie(<span class="number">0</span>),<span class="built_in">cout</span>.tie(<span class="number">0</span>);<span class="comment">//一个优化</span></span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; ++i) <span class="built_in">cin</span>&gt;&gt;s[i];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; ++i) &#123;</span><br><span class="line">		ans=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> j=<span class="number">1</span>; j&lt;=n; ++j) &#123;</span><br><span class="line">			<span class="keyword">int</span> k=<span class="number">0</span>,kk=s[j].find(s[i],k);</span><br><span class="line">			<span class="keyword">while</span>(kk&lt;s[j].length()) &#123;</span><br><span class="line">				k=kk+<span class="number">1</span>;</span><br><span class="line">				kk=s[j].find(s[i],k);</span><br><span class="line">				++ans;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+		<h4 id="Bandizip"><a href="#Bandizip" class="headerlink" title="Bandizip"></a>Bandizip</h4><h4 id="下载："><a href="#下载：" class="headerlink" title="下载："></a>下载：</h4><p>​            官网：  <a href="http://www.bandisoft.com/" target="_blank" rel="noopener">http://www.bandisoft.com/</a> </p>
+<h4 id="软件特色"><a href="#软件特色" class="headerlink" title="软件特色"></a>软件特色</h4><p>​         Bandizip 是一款压缩软件，它支持WinZip、7-Zip 和 WinRAR 以及其它压缩格式。它拥有非常快速的压缩和解压缩的算法，适用于多核心压缩、快速拖放、高速压缩等功能。软件授权： 免费软件（家庭和办公室 100% 免费）。支持压缩和解压缩: Zip (z01)、ZipX (zx01)、TAR、TGZ、7Z (7z.001)、LZH、ISO 和 EXE (e01)仅支持解压缩: RAR (part1.rar、r01)、ALZ、APK、ARJ、BH、BZ、BZ2、CAB、EGG、GZ、J2J、JAR、IMG、IPA、ISO、LHA、LZH、LZMA、PMA、TBZ、TBZ2、TGZ、TLZ、TXZ、UDF、WAR、WIM、XZ 和 Z </p>
+<p>​       1.高速归档：avi，wmv、mp3这类的文件是很难压缩的，而这个功能能够使用自己独特的算法绕过这些文档，从而加快文件的压缩速度。</p>
+<p>　　2.更快的拖拽压缩/解压缩：一般同类软件在使用拖拽方式解压缩的时候，软件先会把其中的文件提取到一个临时文件夹，解压完毕后才把临时文件夹中的所有文件复制到你指定的文件夹中，这样会浪费很多时间，而Bandizip的拖拽功能则是直接解压到指定文件夹，所以整个时间会节省不少。 </p>
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="https://i.loli.net/2019/08/14/T4Hra9CYMc1xGDy.jpg"></div>
+	<div id="current-post-cover" data-scr="https://i.loli.net/2020/01/27/FpKVirk9vDHjLs2.png"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -346,12 +358,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2020/01/26/unity 下载&安装/" title="Unity 下载&安装" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2019/08/14/c++ set用法/" title="c++set用法" rel="next">
+			<a href="/2020/01/26/常用软件推荐(1)/" title="常用软件推荐(1)" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -369,30 +377,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2020/01/27/常用软件推荐(2)/" title="常用软件推荐(2)">
-								常用软件推荐(2)			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								一月 27日, 2020				
-							</p>
-							<p class="relate-post-content">
-								Bandizip下载：​            官网：  http://www.bandisoft.com/ 
-软件特色​         Bandizip 是一款压缩软件，它支持WinZip、7-Zip 和 WinRAR 以及其它压...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2020/01/27/常用软件推荐(2)/" title="常用软件推荐(2)">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://i.loli.net/2020/01/27/FpKVirk9vDHjLs2.png" alt="常用软件推荐(2)"/>
-							</a>
-						</div>
-					</li>											
-			
 			
 					<li>
 						<div class="relate-post-text">
@@ -439,6 +423,31 @@
 							<a href="/2020/01/26/unity 下载&安装/" title="Unity 下载&安装">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://img.xjh.me/random_img.php?type=bg&amp;ctype=nature&amp;return=302" alt="Unity 下载&amp;安装"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/08/14/题解 P3966 【[TJOI2013]单词】/" title="题解 P3966 【[TJOI2013]单词】">
+								题解 P3966 【[TJOI2013]单词】			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								八月 14日, 2019				
+							</p>
+							<p class="relate-post-content">
+								这道题可以用字符串的find做，虽然代码易打，但还是有要注意的地方：
+1：每次查找位置以后，下一次查找的位置是以上一次查找的位置加1，否则就会死循环。
+2：当find查找不到的时候，似乎会返回一个很大的值，所以，查找的位置小于字符串长...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/08/14/题解 P3966 【[TJOI2013]单词】/" title="题解 P3966 【[TJOI2013]单词】">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://i.loli.net/2019/08/14/T4Hra9CYMc1xGDy.jpg" alt="题解 P3966 【[TJOI2013]单词】"/>
 							</a>
 						</div>
 					</li>											
